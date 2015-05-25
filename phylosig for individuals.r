@@ -2,7 +2,8 @@
 
 phylosig.indiv<-function(tree, x,  method = "K", test = TRUE, nsim = 1000, se = NULL, 
     start = NULL, control = list()){
-    if (class(tree) != "phylo") 
+    require(phytools)
+	if (class(tree) != "phylo") 
         stop("tree object must be of class 'phylo'.")
 	if(class(x) != "data.frame")
 		stop("x object must be of class 'data.frame'.")
